@@ -13,7 +13,7 @@ $conn = new mysqli(DBServer, DBUser, DBPass);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "Connected successfully";
+//echo "Welcome";
 
 // define site path
 define('DIR','localhost/');
