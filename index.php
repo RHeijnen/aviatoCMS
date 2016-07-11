@@ -13,27 +13,59 @@ include('conf.php');
 
 <body>
 <div id="Wrap">
-		<div id="Menu"> 
-
+		<div id="Menu">
+		<table id="menubar"><td>
+		
+		
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/index.php'" type="button"><span>Home</span></button>
+		</td></tr>
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/login.php'" type="button"><span>Menu Item 1</span></button>
+		</td></tr>
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/login.php'" type="button"><span>Menu Item 2</span></button>
+		</td></tr>
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/login.php'" type="button"><span>Menu Item 3</span></button>
+		</td></tr>
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/login.php'" type="button"><span>Menu Item 4</span></button>
+		</td></tr>
+		<tr><td>
+		<button id="MatButton"  onclick="window.location.href='/login.php'" type="button"><span>Menu Item 5</span></button>
+		</td></tr>
+		</td></table>
+		
+		
+		<br><br><br>
+		<a class="adminbutton" href="/login.php"> Admin </a>
 	</div>
     
 	<div id="Container">	
+	
+	<div class = 'Box'> 
+	<div class = 'Headline'>
+	<p class = 'HeadlineText'> Sample Headline  </p></div>
+	<div class = 'Line'></div>
+
+	<div class = 'Summary'> Sample Content</div>
+	</div>
 	<?php
 		$sql = "SELECT visible,summary,headline,content FROM cms.articles";
 		$result = $conn ->query($sql);
 		if($result -> num_rows > 0){
 			while($row = $result ->fetch_assoc()){
-				if($row['visible'] == 1){
-				
-					echo "<div class = 'Box'>";
-					echo $row['headline']."<br>";
-					echo $row['summary']."<br>";
-					echo $row['content']."<br>";
-					echo $row['content']."<br>";								
-					echo "</div>";
-				}
+				if($row['visible'] == 1){                   ?>
+					<div class = 'Box'> 
+					<div class = 'Headline'>
+					<p class = 'HeadlineText'><?php echo $row['headline'] ?></p></div>
+					<div class = 'Line'></div>
+					<div class = 'Summary'><?php echo $row['summary'] ?></div>
+					</div>
+<?php	}
 			}
-		}
+				}
 	?>
 
 

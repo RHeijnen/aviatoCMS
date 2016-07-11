@@ -23,5 +23,6 @@ define('DIRADMIN','localhost/admin/');
 //define include checker
 define('included', 1);
 require_once('function.php');
+require_once('authenticate.php');
 ?>
 

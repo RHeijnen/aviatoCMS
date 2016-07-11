@@ -9,7 +9,20 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: auto;
+	background-color: #BBDEFB;
+	background-color: #FFFFFF;
+
 }
+#menubar,td{
+	margin-left: 10px;
+}
+.adminbutton {
+    display: inline-block;
+    margin-left: 25%;
+    position: absolute;
+    bottom: 11px;
+}
+
 #Wrap {
 	width: 100%;
 	height: 100%;
@@ -21,16 +34,15 @@ body {
 	top: 0%;
 }
 #Menu {
-	border: 1px solid black;
 	display: inline-block;
-	width: 150px;
+	width: 15%;
 	height: 100%;
 	float: left;
 	position: absolute;
 	z-index: 1;
+	min-width:125px;
 }
 #Container {
-	border: 1px solid black;
 	display: inline-block;
 	width: 85%;
 	height: 100%;
@@ -38,19 +50,49 @@ body {
 	position: relative;
 	overflow: auto;
 }
+/* http://www.materialpalette.com/blue/light-blue */
 .Box {
-	border: 1px solid black;
 	display: table;
 	width: 90%;
 	height: 20%;
 	margin: 31px;
 	background-color:powderblue;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ }
+.Headline {
+	display: table;
+	width: 100%;
+	height: 35%;
+	background-color:#1976D2;
 }
-#Box {
-	border: 1px solid black;
+.Line {
 	display: table;
-	width: 90%;
-	height: 20%;
-	margin: 31px;
-	background-color:powderblue;
+	width: 100%;
+	height: 5%;
+	background-color:#3F51B5;
+}
+.Summary {
+	display: table;
+	width: 100%;
+	height: 60%;
+	background-color:#FFFFFF;
+}
+.HeadlineText{
+	color:#FFFFFF;
+	  text-align: center;
+}
+.SummaryText{
+	color:#212121;
+	 text-align: left;
+}
+
+#MatButton{
+	border-radius: 10px;
+	background-color: #03A9F4; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
