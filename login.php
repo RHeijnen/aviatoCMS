@@ -1,8 +1,14 @@
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+		
+	<div id = 'LoginBox'> 
+	<div id = 'LoginBoxHeadline'>
+	<p class = 'HeadlineText'> Log in  </p></div>
+	<div id = 'LoginBoxLine'> </div>
+
+	<div id	 = 'LoginBoxSummary'> 
 			<form action="authenticate.php" method="post">
-			<table width="150px" align="center" bgcolor="skyblue">
-				<tr align="center">
-					<td colspan="3"><h2>Admin Login</h2></td>
-				</tr>
+			<table align="center" >
 				<tr>
 					<td align="right"><b>Username</b></td>
 					<td><input type="text" name="username" required="required"/></td>
@@ -18,5 +24,6 @@
 				</tr>
 		</table>
 		</form>
-		
-		
+	
+	</div>
+	</div>

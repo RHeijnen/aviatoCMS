@@ -6,8 +6,13 @@ define('DBUser','root');
 define('DBPass','');
 
 
+
 // Create connection
 $conn = new mysqli(DBServer, DBUser, DBPass);
+class DBi {
+    public static $conn;
+}
+DBi::$conn = new mysqli(DBServer, DBUser, DBPass);
 
 // Check connection
 if ($conn->connect_error) {
@@ -22,7 +27,7 @@ define('DIRADMIN','localhost/admin/');
 
 //define include checker
 define('included', 1);
-require_once('function.php');
+//require_once('function.php');
 require_once('authenticate.php');
 ?>
 
